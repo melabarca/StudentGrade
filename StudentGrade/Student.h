@@ -8,7 +8,7 @@ public:
 	string getLetterGrade(double);
 	Student(string);
 	void AddGrade(double);
-	double CalcAverage();
+	double CalcAvg();
 private:
 	string Name;
 	double TotalGrade;

@@ -14,18 +14,20 @@ int main()
     double grade;
     int numGrade=1;
 
-    cout << "Welcome, student. Please enter your name";
+    cout << "Welcome, student. What is your first name? ";
     cin >> n;
-    Student();
+    Student Student(n);
 
     cout << "Enter the number of grades you will input: ";
-    cin << numGrade;
+    cin >> numGrade;
 
     while (numGrade<=10)
     {
-        Student::AddGrade(grade)
+        Student.AddGrade(grade);
     }
+    
    /*
+  
    MUST:
 
     The program must allow the user to enter the number 
@@ -48,12 +50,12 @@ int main()
     After the loop is finished it must invoke the
     function CalcAverage to obtain the final average,
     then invoke the function GetLetterGrade (see rubrics). */
-    CalcAvg();
+    Student.CalcAvg();
 
     /* 
     Finally, the main program must print the name of 
     the student,the final grade, and the letter grade.*/
-    getLetterGrade();
+    Student.getLetterGrade(grade);
 
 
     //accumulator AddGrade(double)
