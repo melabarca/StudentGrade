@@ -26,17 +26,20 @@ int main()
     cin >> num;
     cout << "\n\n";
 
-    do
-    {
-        x++;
-        cout << "Enter grade #" << x << ": ";
-        cin >> grade;
-        user.AddGrade(grade);
+    /*
+    After the loop is finished it must invoke the
+    function CalcAverage to obtain the final average,
+    then invoke the function GetLetterGrade (see rubrics). */
+    Student.CalcAvg();
 
     } while (x != num);
 
-
     cout << "\nStudent: " << n;
-    cout << "\nFinal Grade: " << user.CalcAvg(num);
+    cout << "\nFinal Grade: " << grade;
     cout << "\nLetter Grade:" << user.getLetterGrade(grade);
+
+    //accumulator AddGrade(double)
+    //CalcAvg() gets grades and divides by 10 then returns to you
+    //use average to run getLetterGrade(double)
+    //then evaluate grade using if statements
 }

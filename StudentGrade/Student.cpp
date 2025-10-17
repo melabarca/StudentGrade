@@ -9,6 +9,7 @@ Student::Student(string n)
 
 void Student::AddGrade(double grade)//adds grade values together
 {
+	this->TotalGrade = TotalGrade + grade;
 	this->TotalGrade += grade;
 }
 
