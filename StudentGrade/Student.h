@@ -1,15 +1,16 @@
 #pragma once
 #include <iostream>
-using namespace std;
+#include <string>
 
 class Student
 {
 public:
-	Student(string);
 	string getLetterGrade(double);
+	Student(string);
 	void AddGrade(double);
-	double CalcAvg(int);
+	double CalcAvg();
 private:
 	string Name;
 	double TotalGrade;
 };
+
