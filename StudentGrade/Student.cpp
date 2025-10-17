@@ -1,20 +1,20 @@
 #include "Student.h"
-#include <string>
-using namespace std;
 
 Student::Student(string n)
 {
 	this->Name = n; //accepts strings only (name of student)
+	this->TotalGrade = 0;
+
 }
 
-void Student::AddGrade(double g)
+void Student::AddGrade(double grade)//adds grade values together
 {
-	this->TotalGrade + g; //adds grade values together
+	this->TotalGrade = TotalGrade + grade;
 }
 
-double Student::CalcAvg() 
+double Student::CalcAvg(int num)// divides totalgrade by 10
 {
-	this->TotalGrade / 10; // divides totalgrade by 10
+	return this->TotalGrade = TotalGrade / num;
 }
 
 string Student::getLetterGrade(double grade)
@@ -28,7 +28,7 @@ string Student::getLetterGrade(double grade)
 	{
 		return "A";
 	}
-	else if (grade>= 90)
+	else if (grade >= 90)
 	{
 		return "A-";
 	}
@@ -36,11 +36,11 @@ string Student::getLetterGrade(double grade)
 	{
 		return "B+";
 	}
-	else if (grade>=83)
+	else if (grade >= 83)
 	{
 		return "B";
 	}
-	else if(grade>=80)
+	else if (grade >= 80)
 	{
 		return "B-";
 	}
@@ -60,11 +60,11 @@ string Student::getLetterGrade(double grade)
 	{
 		return "D+";
 	}
-	else if (grade>= 63)
+	else if (grade >= 63)
 	{
 		return "D";
 	}
-	else if (grade>= 60)
+	else if (grade >= 60)
 	{
 		return "D-";
 	}
